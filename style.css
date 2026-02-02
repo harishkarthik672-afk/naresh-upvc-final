@@ -23,6 +23,7 @@ body {
     color: var(--text-white);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .mesh-bg {
@@ -1025,6 +1026,29 @@ body {
     align-items: center;
 }
 
+@media (max-width: 992px) {
+    .performance-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .swatch-column {
+        flex-direction: row;
+        justify-content: center;
+        order: 2;
+    }
+
+    .product-display-column {
+        order: 1;
+        height: 400px;
+    }
+
+    .performance-info {
+        order: 3;
+        text-align: center;
+    }
+}
+
 .swatch-column {
     display: flex;
     flex-direction: column;
@@ -1407,7 +1431,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 400px;
+    min-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .transform-content {
+        padding: 40px 20px;
+        min-width: 100%;
+    }
+
+    .transform-stats {
+        justify-content: center;
+    }
 }
 
 .section-tag-small {
@@ -2363,45 +2398,62 @@ body {
         grid-template-rows: auto;
     }
 
-    .item-large,
-    .item-medium {
-        grid-column: span 1;
-        grid-row: span 1;
-        height: 300px;
-    }
-
+    .performance-grid,
+    .transform-grid,
+    .steel-section .row,
+    .tab-grid,
     .about-grid,
-    .contact-grid,
-    .footer-top {
-        grid-template-columns: 1fr;
+    .mfr-grid,
+    .vision-grid {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+        padding: 20px !important;
     }
 
-    .masonry-gallery {
-        column-count: 2;
+    .tab-grid {
+        padding: 20px !important;
+    }
+
+    .performance-grid {
+        display: grid !important;
+    }
+
+    .dropdown-menu {
+        position: static !important;
+        width: 100% !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 0 0 0 20px !important;
+        display: none;
+        border: none !important;
+    }
+
+
+    .has-dropdown>a::after {
+        content: '\f107';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        margin-left: 10px;
     }
 }
 
-@media (max-width: 600px) {
-    .masonry-gallery {
-        column-count: 1;
+@media (max-width: 768px) {
+
+    .section-title-large,
+    .inner-hero h1,
+    .hero-content h1 {
+        font-size: 28px !important;
     }
 
-    #navbar {
-        padding: 15px 20px;
-    }
-
-    .nav-links,
-    .nav-right-box {
-        display: none;
-    }
-
-    .award-showcase-section h2 {
-        font-size: 24px;
-        padding: 0 20px;
-    }
-
-    .award-banner-img {
-        max-width: 100%;
+    .footer-top {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 40px;
     }
 }
 
@@ -3302,7 +3354,7 @@ body {
 
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -4629,8 +4681,6 @@ body {
     }
 
     .nav-links {
-        display: none;
-        /* Controlled by JS / Active class */
         position: fixed;
         top: 0;
         right: -100%;
@@ -4646,6 +4696,8 @@ body {
         transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         z-index: 1000;
         padding: 50px 20px;
+        display: flex;
+        /* Always flex, positioning hides it */
     }
 
     .nav-links.active {
@@ -4686,8 +4738,29 @@ body {
         line-height: 1.1;
     }
 
-    .brand-main {
+    .hero-bottom-content {
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding: 60px 20px !important;
+    }
+
+    .award-badge-container {
+        position: relative !important;
+        left: auto !important;
+        top: 0 !important;
+        transform: none !important;
+        width: 140px !important;
+        height: 140px !important;
+        margin: 0 auto 30px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .bottom-tagline {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
         font-size: 18px !important;
+        max-width: 280px;
     }
 
     .brand-sub {
@@ -4727,9 +4800,23 @@ body {
 
     .legacy-tag,
     .legacy-title,
-    .legacy-desc {
+    .legacy-desc,
+    .legacy-year-badge,
+    .legacy-stats {
         text-align: center !important;
         justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .legacy-text-content {
+        text-align: center !important;
+        padding-right: 0 !important;
+    }
+
+    .legacy-stat-row {
+        justify-content: center !important;
+        text-align: center !important;
     }
 
     /* Floating WhatsApp Icon Positioning */
@@ -4739,6 +4826,19 @@ body {
         width: 50px;
         height: 50px;
         font-size: 20px;
+    }
+
+    .infra-round-logo {
+        width: 140px !important;
+        height: 140px !important;
+    }
+
+    .infra-logo-wrapper {
+        top: -70px !important;
+    }
+
+    .logo-inner .l-main {
+        font-size: 18px !important;
     }
 }
 

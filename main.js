@@ -33,8 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
                 // Close mobile menu if open
-                if (window.innerWidth <= 768) {
-                    navLinks.style.display = 'none';
+                if (window.innerWidth <= 1024) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.classList.remove('open');
                 }
             }
         });
@@ -107,14 +108,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile Menu Styling Fix
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            navLinks.style.display = 'flex';
-            navLinks.style.position = 'static';
-            navLinks.style.background = 'transparent';
-        } else {
-            navLinks.style.display = 'none';
+    // Dropdown Toggle for Mobile
+    const dropdownToggles = document.querySelectorAll('.has-dropdown > a');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                const menu = toggle.nextElementSibling;
+                if (menu) {
+                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                }
+            }
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 1024) {
+            if (navLinks.classList.contains('active') &&
+                !navLinks.contains(e.target) &&
+                !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.classList.remove('open');
+            }
         }
     });
     // Why Choose Section Tabs
