@@ -26,6 +26,25 @@ body {
     width: 100%;
 }
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
 .mesh-bg {
     position: fixed;
     top: 0;
@@ -73,10 +92,22 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
+@media (max-width: 768px) {
+    #navbar {
+        padding: 10px 15px;
+    }
+}
+
 .nav-left-box {
     display: flex;
     align-items: center;
     gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .nav-left-box {
+        gap: 10px;
+    }
 }
 
 .header-logo-box {
@@ -91,6 +122,18 @@ body {
     line-height: 1;
 }
 
+@media (max-width: 768px) {
+    .brand-main {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-main {
+        font-size: 16px;
+    }
+}
+
 .brand-main span {
     color: #3f51b5;
 }
@@ -102,6 +145,18 @@ body {
     margin-top: 4px;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .brand-sub {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-sub {
+        font-size: 6px;
+    }
 }
 
 .nav-links {
@@ -309,6 +364,14 @@ body {
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero-bottom-bar {
+        height: auto;
+        min-height: 200px;
+        padding-bottom: 30px;
+    }
 }
 
 .hero-wave {
@@ -1288,8 +1351,21 @@ body {
 
 @media (max-width: 768px) {
     .ticker-item {
-        font-size: 40px;
-        -webkit-text-stroke: 1px #5D4037;
+        font-size: 32px;
+    }
+
+    .ticker-section {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .ticker-item {
+        font-size: 24px;
+    }
+
+    .ticker-section {
+        padding: 30px 0;
     }
 }
 
@@ -4842,14 +4918,368 @@ body {
     }
 }
 
-/* Small Phone Optimizations */
-@media (max-width: 480px) {
-    .brand-main {
+/* Stats Section Mobile */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .stat-number {
+        font-size: 40px !important;
+    }
+}
+
+/* Products Showcase Mobile */
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .products-showcase-section {
+        padding: 60px 0;
+    }
+
+    .products-header h2 {
+        font-size: 28px;
+    }
+}
+
+/* Performance Section Mobile */
+@media (max-width: 992px) {
+    .performance-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .swatch-column {
+        order: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .product-display-column {
+        order: 1;
+    }
+
+    .features-column {
+        order: 3;
+        text-align: center;
+    }
+
+    .features-column h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .performance-section {
+        padding: 40px 0;
+    }
+
+    .door-container {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .features-list-vertical {
+        gap: 15px;
+    }
+
+    .feature-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* Offerings Section Mobile */
+@media (max-width: 992px) {
+    .offerings-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .offerings-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .header-filters {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .offerings-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .offerings-section {
+        padding: 60px 0;
+    }
+
+    .header-left h2 {
+        font-size: 28px;
+    }
+
+    .filter-btn {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+}
+
+/* Transformation Section Mobile */
+@media (max-width: 992px) {
+    .transform-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .transform-content {
+        text-align: center;
+    }
+
+    .transform-stats {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .transformation-section {
+        padding: 60px 0;
+    }
+
+    .transform-content h2 {
+        font-size: 28px;
+    }
+
+    .comparison-viewer {
+        height: 350px;
+    }
+
+    .stat-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .stat-val {
         font-size: 20px;
     }
 
+    .stat-label {
+        font-size: 11px;
+    }
+}
+
+/* Steel Section Mobile */
+@media (max-width: 992px) {
+    .steel-section .row {
+        flex-direction: column;
+    }
+
+    .reverse-mobile {
+        flex-direction: column-reverse;
+    }
+
+    .steel-section .col-lg-6 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .steel-checklist {
+        text-align: left;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .steel-section {
+        padding: 60px 0;
+    }
+
+    .section-title-large {
+        font-size: 28px !important;
+    }
+
+    .steel-visual {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Door Collections Mobile */
+@media (max-width: 992px) {
+    .door-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .door-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .door-collections-section {
+        padding: 60px 0;
+    }
+
+    .collections-title {
+        font-size: 28px;
+    }
+
+    .collections-filters {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .filter-tab {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+}
+
+/* Infrastructure Section Mobile */
+@media (max-width: 992px) {
+    .infra-section {
+        padding: 60px 0;
+    }
+
+    .infra-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .infra-text-side {
+        order: 2;
+    }
+
+    .infra-visual-side {
+        order: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .infra-section h2 {
+        font-size: 28px;
+    }
+
+    .infra-round-logo {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .infra-logo-wrapper {
+        top: -60px !important;
+    }
+}
+
+/* Gallery Section Mobile */
+@media (max-width: 992px) {
+    .masonry-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .masonry-gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .gallery-section {
+        padding: 60px 0;
+    }
+
+    .gallery-section h2 {
+        font-size: 28px;
+    }
+}
+
+/* Area Section Mobile */
+@media (max-width: 992px) {
+    .area-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .area-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .area-section {
+        padding: 60px 0;
+    }
+
+    .area-section h2 {
+        font-size: 28px;
+    }
+}
+
+/* Footer Mobile */
+@media (max-width: 992px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-links-box ul {
+        text-align: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        padding: 15px 0;
+    }
+}
+
+/* Small Phone Optimizations */
+@media (max-width: 480px) {
+    .brand-main {
+        font-size: 18px;
+    }
+
     .brand-sub {
-        font-size: 8px;
+        font-size: 7px;
     }
 
     .hero-content p {
@@ -4858,5 +5288,151 @@ body {
 
     .stat-number {
         font-size: 30px !important;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 24px !important;
+    }
+
+    h3 {
+        font-size: 20px !important;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .section-tag,
+    .section-tag-blue,
+    .section-tag-small {
+        font-size: 10px;
+    }
+}
+
+/* --- INNER PAGES MOBILE FIXES --- */
+
+/* Inner Hero Mobile */
+@media (max-width: 768px) {
+    .inner-hero {
+        height: 300px !important;
+    }
+
+    .inner-hero h1 {
+        font-size: 32px !important;
+        padding: 0 15px;
+    }
+
+    .inner-hero p {
+        font-size: 16px !important;
+        padding: 0 15px;
+    }
+}
+
+/* Collections Grid (Used in Modular Kitchen, Aluminium, UPVC Windows) */
+@media (max-width: 992px) {
+    .collections-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .collections-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
+
+/* About Page Grids */
+@media (max-width: 992px) {
+    .about-services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+
+    .why-plus-grid {
+        gap: 20px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .why-plus-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .about-grid {
+        flex-direction: column !important;
+    }
+
+    .about-image-card {
+        height: 300px !important;
+    }
+
+    .why-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* Contact Page Grid */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Area Grid (Contact Page) */
+@media (max-width: 600px) {
+    .area-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Product Detail Sections */
+@media (max-width: 992px) {
+    .product-layout {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .product-info-card {
+        order: 2;
+    }
+
+    .product-visual {
+        order: 1;
+        height: 300px !important;
+    }
+
+    .product-info-card h2 {
+        font-size: 32px !important;
+    }
+}
+
+/* Legacy Section (About Page) */
+@media (max-width: 992px) {
+    .legacy-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .legacy-stats {
+        flex-direction: column;
+        gap: 20px;
     }
 }
