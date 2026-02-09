@@ -1520,7 +1520,7 @@ body {
 
 @media (max-width: 768px) {
     .transform-content {
-        padding: 80px 20px;
+        padding: 50px 15px;
         min-width: 100%;
         text-align: center;
         display: flex;
@@ -1530,25 +1530,25 @@ body {
     }
 
     .transform-content h2 {
-        font-size: 28px;
-        line-height: 1.25;
-        margin-bottom: 25px;
+        font-size: 24px;
+        line-height: 1.35;
+        margin-bottom: 20px;
         width: 100%;
-        max-width: 400px;
-        /* Forces a nice wrap on mobile */
+        max-width: 310px;
         margin-left: auto;
         margin-right: auto;
         word-wrap: break-word;
     }
 
     .transform-content p {
-        font-size: 15px;
-        max-width: 450px;
-        margin-bottom: 45px;
+        font-size: 14px;
+        max-width: 290px;
+        margin-bottom: 40px;
         line-height: 1.6;
         margin-left: auto;
         margin-right: auto;
-        opacity: 0.95;
+        opacity: 0.9;
+        text-wrap: balance;
     }
 
     .transform-stats {
