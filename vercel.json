@@ -1,7 +1,3 @@
 {
-  "cleanUrls": false,
-  "routes": [
-    { "src": "^/$", "dest": "/index.html" },
-    { "src": "^(.*)$", "dest": "/$1" }
-  ]
+    "cleanUrls": true
 }
