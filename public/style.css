@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --bg-dark: #ffffff;
     --card-bg: rgba(255, 255, 255, 0.9);
     --accent-primary: #3f51b5;
@@ -5504,5 +5504,149 @@ body {
     .legacy-stats {
         flex-direction: column;
         gap: 20px;
+    }
+}
+
+
+/* --- CONSOLIDATED MOBILE FIXES --- */
+@media (max-width: 768px) {
+    /* 1. Latest Offerings Section Fixes */
+    .offerings-header {
+        justify-content: center !important;
+        text-align: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+    .section-tag-blue {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    .header-filters {
+        justify-content: center !important;
+        width: 100% !important;
+        gap: 15px !important;
+        flex-wrap: wrap !important;
+    }
+    .filter-btn {
+        font-size: 14px !important;
+    }
+
+    /* 2. Transformation (ABS Doors) Section Fixes */
+    .transform-content {
+        padding: 60px 20px !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .transform-content h2 {
+        font-size: 26px !important;
+        max-width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    .transform-content p {
+        font-size: 14px !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+    .section-tag-small {
+        justify-content: center !important;
+        margin-bottom: 15px !important;
+    }
+    .transform-grid {
+        flex-direction: column !important;
+    }
+
+    /* 3. Slider (Visual) Fixes */
+    .transform-visual {
+        min-width: 100% !important;
+        height: 350px !important;
+        min-height: 350px !important;
+        order: 2 !important;
+    }
+    .comparison-viewer {
+        border-radius: 0 !important;
+    }
+    .transform-stats {
+        justify-content: center !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+
+/* --- CONSOLIDATED MOBILE FIXES V2 --- */
+@media (max-width: 768px) {
+    /* 1. Latest Offerings Section Fixes */
+    .offerings-header {
+        justify-content: center !important;
+        text-align: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+    .header-left {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .section-tag-blue {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    .header-filters {
+        justify-content: center !important;
+        width: 100% !important;
+        gap: 15px !important;
+        flex-wrap: wrap !important;
+    }
+    .filter-btn {
+        font-size: 14px !important;
+    }
+
+    /* 2. Transformation (ABS Doors) Section Fixes */
+    .transform-content {
+        padding: 60px 20px !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .transform-content h2 {
+        font-size: 26px !important;
+        max-width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    .transform-content p {
+        font-size: 14px !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+    .section-tag-small {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+        margin-bottom: 15px !important;
+    }
+    .transform-grid {
+        flex-direction: column !important;
+    }
+
+    /* 3. Slider (Visual) Fixes */
+    .transform-visual {
+        min-width: 100% !important;
+        height: 350px !important;
+        min-height: 350px !important;
+        order: 2 !important;
+    }
+    .comparison-viewer {
+        border-radius: 0 !important;
+    }
+    .transform-stats {
+        justify-content: center !important;
+        margin-bottom: 30px !important;
     }
 }
