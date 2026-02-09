@@ -1512,12 +1512,35 @@ body {
 
 @media (max-width: 768px) {
     .transform-content {
-        padding: 40px 20px;
+        padding: 50px 20px;
         min-width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .transform-content h2 {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .transform-content p {
+        font-size: 15px;
+        max-width: 100%;
+        margin-bottom: 30px;
     }
 
     .transform-stats {
         justify-content: center;
+        gap: 20px;
+    }
+
+    .section-tag-small {
+        margin-left: -10px; /* Adjust for the border-left padding */
+        padding-left: 13px;
     }
 }
 
