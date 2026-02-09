@@ -45,6 +45,14 @@ body {
     }
 }
 
+.container-fluid {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .mesh-bg {
     position: fixed;
     top: 0;
@@ -1512,32 +1520,40 @@ body {
 
 @media (max-width: 768px) {
     .transform-content {
-        padding: 60px 25px;
+        padding: 80px 20px;
         min-width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .transform-content h2 {
-        font-size: 24px;
-        line-height: 1.4;
+        font-size: 28px;
+        line-height: 1.25;
         margin-bottom: 25px;
         width: 100%;
+        max-width: 400px;
+        /* Forces a nice wrap on mobile */
+        margin-left: auto;
+        margin-right: auto;
         word-wrap: break-word;
     }
 
     .transform-content p {
         font-size: 15px;
-        max-width: 100%;
-        margin-bottom: 40px;
+        max-width: 450px;
+        margin-bottom: 45px;
         line-height: 1.6;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.95;
     }
 
     .transform-stats {
         justify-content: center;
-        gap: 30px;
+        gap: 40px;
         width: 100%;
     }
 
@@ -1545,9 +1561,13 @@ body {
         border-left: none !important;
         padding-left: 0 !important;
         margin-left: 0 !important;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         font-weight: 600;
-        letter-spacing: 1.5px;
+        letter-spacing: 2.5px;
+        text-align: center;
+        width: 100%;
+        color: #B2EBF2;
+        /* Lighter shade for better contrast on navy */
     }
 }
 
