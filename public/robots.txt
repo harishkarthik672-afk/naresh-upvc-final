@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nareshupvc.com/sitemap.xml
+Sitemap: https://nareshupvc.in/sitemap.xml
