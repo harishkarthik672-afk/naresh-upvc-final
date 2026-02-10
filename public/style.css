@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --bg-dark: #ffffff;
     --card-bg: rgba(255, 255, 255, 0.9);
     --accent-primary: #3f51b5;
@@ -1015,7 +1015,8 @@ body {
     height: 40px;
     background: #ffffff;
     border-radius: 50%;
-    display: flex;
+    display: none;
+    /* Hidden as per request to remove symbol */
     align-items: center;
     justify-content: center;
     color: #051039;
@@ -3914,10 +3915,48 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    padding: 20px;
+    padding: 0;
     text-align: center;
     border: 5px solid #5d4037;
     /* Brown outline */
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-split-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Vertical split */
+    position: relative;
+}
+
+.logo-video-half {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-bg-video {
+    width: 100%;
+    height: 200%;
+    /* Scale to cover */
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.logo-white-half {
+    width: 100%;
+    height: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
 }
 
 .logo-inner {
@@ -3991,15 +4030,25 @@ body {
     }
 
     .l-main {
-        font-size: 16px;
-    }
-
-    .l-sub {
         font-size: 14px;
     }
 
+    .l-sub {
+        font-size: 12px;
+    }
+
     .l-info {
-        font-size: 6px;
+        font-size: 5px;
+        max-width: 80px;
+    }
+
+    .btn-contact-footer {
+        font-size: 14px !important;
+        padding: 10px 20px !important;
+    }
+
+    .infra-tagline {
+        font-size: 20px;
     }
 }
 
@@ -5512,10 +5561,12 @@ body {
 
 /* --- FINAL PERFECT MOBILE ALIGNMENT --- */
 @media (max-width: 768px) {
+
     /* 1. Latest Offerings Section Fixes */
     .offerings-section {
         padding: 60px 0 !important;
     }
+
     .offerings-header {
         flex-direction: column !important;
         align-items: center !important;
@@ -5523,12 +5574,14 @@ body {
         gap: 20px !important;
         width: 100% !important;
     }
+
     .header-left {
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
     }
+
     .header-filters {
         display: flex !important;
         flex-direction: row !important;
@@ -5539,11 +5592,13 @@ body {
         overflow-x: auto !important;
         padding-bottom: 10px !important;
     }
+
     .filter-btn {
         padding: 5px 10px !important;
         font-size: 13px !important;
         white-space: nowrap !important;
     }
+
     .section-tag-blue {
         justify-content: center !important;
     }
@@ -5552,6 +5607,7 @@ body {
     .transformation-section {
         padding: 0 !important;
     }
+
     .transform-content {
         padding: 50px 20px !important;
         text-align: center !important;
@@ -5560,6 +5616,7 @@ body {
         width: 100% !important;
         max-width: 100% !important;
     }
+
     .transform-content h2 {
         font-size: 24px !important;
         width: 100% !important;
@@ -5568,6 +5625,7 @@ body {
         margin-right: auto !important;
         text-align: center !important;
     }
+
     .transform-content p {
         width: 100% !important;
         max-width: 300px !important;
@@ -5576,6 +5634,7 @@ body {
         text-align: center !important;
         font-size: 14px !important;
     }
+
     .section-tag-small {
         justify-content: center !important;
         border-left: none !important;
@@ -5583,11 +5642,13 @@ body {
         text-align: center !important;
         width: 100% !important;
     }
+
     .transform-stats {
         justify-content: center !important;
         gap: 20px !important;
         width: 100% !important;
     }
+
     .stat-circle {
         width: 90px !important;
         height: 90px !important;
@@ -5600,12 +5661,12 @@ body {
         height: 300px !important;
         order: 2 !important;
     }
+
     .comparison-viewer {
         height: 300px !important;
     }
+
     .ticker-item {
         font-size: 22px !important;
     }
 }
-   
- 
