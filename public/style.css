@@ -3900,10 +3900,38 @@ body {
 
 .infra-logo-wrapper {
     position: absolute;
-    top: -80px;
+    top: -160px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infra-contact-pill {
+    padding: 10px 25px;
+    background: #ffffff;
+    color: #25D366;
+    border: 2px solid #25D366;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.infra-contact-pill:hover {
+    background: #25D366;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
 }
 
 .infra-round-logo {
@@ -4022,6 +4050,16 @@ body {
     .infra-tagline-wrapper {
         margin: 20px auto 0;
         text-align: center;
+    }
+
+    .infra-logo-wrapper {
+        top: -140px;
+    }
+
+    .infra-contact-pill {
+        padding: 8px 20px;
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 
     .infra-round-logo {
