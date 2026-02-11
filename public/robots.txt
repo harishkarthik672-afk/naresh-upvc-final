@@ -1,4 +1,12 @@
+# Robots.txt for Naresh UPVC - Optimized for SEO
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /*.py$
+Disallow: /*.ps1$
 
+# Sitemap location
 Sitemap: https://www.nareshupvc.in/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1

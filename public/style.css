@@ -439,25 +439,26 @@ body {
 
 .badge-brand-main {
     font-size: 22px;
-    font-weight: 800;
-    color: #1a237e;
+    font-weight: 900;
+    color: #0d1642;
     line-height: 1;
     margin-bottom: 2px;
 }
 
 .badge-brand-main span {
-    color: #3f51b5;
+    color: #2962ff;
     display: block;
     /* Make UPVC look like your sketch */
     font-size: 20px;
+    font-weight: 900;
 }
 
 .badge-brand-sub {
     font-size: 7px;
-    color: #888;
+    color: #555;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.2;
     max-width: 140px;
     margin-top: 5px;
@@ -480,9 +481,10 @@ body {
     margin-left: auto;
     font-family: 'Lexend', sans-serif;
     font-size: 24px;
-    font-weight: 700;
-    color: #1e293b;
+    font-weight: 800;
+    color: #0f172a;
     font-style: italic;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-content-center {
