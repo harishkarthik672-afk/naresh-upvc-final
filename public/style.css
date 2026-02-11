@@ -5715,3 +5715,17 @@ body {
         font-size: 22px !important;
     }
 }
+
+/* Dark text override for hero sections with light backgrounds */
+.text-dark-hero h1 {
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    color: #000000 !important;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8) !important;
+}
+
+.text-dark-hero p {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8) !important;
+}
