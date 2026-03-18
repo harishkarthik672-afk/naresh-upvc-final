@@ -316,18 +316,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #000;
+    background: url('hero-bg.png') center/cover no-repeat;
 }
 
-.bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
 
 .hero-overlay-dark {
     position: absolute;
@@ -3970,19 +3961,11 @@ body {
 .logo-video-half {
     width: 100%;
     height: 50%;
+    background: var(--accent-primary);
     position: relative;
     overflow: hidden;
 }
 
-.logo-bg-video {
-    width: 100%;
-    height: 200%;
-    /* Scale to cover */
-    object-fit: cover;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
 
 .logo-white-half {
     width: 100%;
